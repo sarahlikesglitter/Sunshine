@@ -1,6 +1,5 @@
 package com.shongywong.sunshine.app;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -67,7 +66,6 @@ public class ForecastFragment extends Fragment
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
             {
                 String text = mArrayAdapter.getItem(i);
-                Context context = getActivity();
                 Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
                 detailIntent.putExtra(Intent.EXTRA_TEXT, text);
                 startActivity(detailIntent);
